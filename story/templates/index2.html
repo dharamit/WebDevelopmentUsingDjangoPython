@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello AngularJS</title>
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">		
+		<script src="{% static 'js/angular.min.js' %}"></script>
+    	<script src="{% static 'js/hello.js' %}"></script>
+	</head>
+	<body ng-app="postSite">
+		<div  ng-controller="PostController as pc">
+			<!--<li ng-repeat="post in posts">-->
+				<p>The ID is {{pc.product.author}}</p>
+				<p>The content is {{pc.product.title}}</p>
+				<p> {{ get }} </p>
+			<!--</li>-->
+		</div>
+	</body>
+</html>
